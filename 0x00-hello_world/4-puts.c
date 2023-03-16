@@ -2,7 +2,7 @@
 /**
  *main:Entry of program
  *Description : printing a sentence using puts
- *return 0
+ *return :always  0
  */
 int main(void)
 {
