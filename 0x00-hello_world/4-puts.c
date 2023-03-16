@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: 'printing a sentence using puts()' 
+ * Description:'printing a sentence using puts()'
  * Return: Always 0 (Success)
  */
 int main(void)
