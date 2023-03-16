@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *Entry of program
+ *main:Entry of program
  *Description : printing a sentence using puts
  *return 0
  */
