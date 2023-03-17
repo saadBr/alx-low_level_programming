@@ -7,8 +7,8 @@
  * Description:'printing all possible different combinations of two two digits'
  * Return: Always 0 (Success)
  */
-int main() {
-   
+int main(void) 
+{
 	int first, second;
 
 	for (first = 0; first <= 98; first++)
