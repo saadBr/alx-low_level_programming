@@ -4,7 +4,7 @@
 /* betty style doc for function main goes there */
 /**
  * main - Entry point
- * Description:'printing all possible different combinations of two two digits.'
+ * Description:'printing all possible different combinations of two two digits'
  * Return: Always 0 (Success)
  */
 int main(void)
