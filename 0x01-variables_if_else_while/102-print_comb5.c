@@ -7,7 +7,7 @@
  * Description:'printing all possible different combinations of two two digits'
  * Return: Always 0 (Success)
  */
-int main(void) 
+int main(void)
 {
 	int first, second;
 
@@ -20,7 +20,7 @@ int main(void)
 			putchar(' ');
 			putchar(48 + (second / 10));
 			putchar(48 + (second % 10));
-			if (!( first == 98 && second == 99))
+			if (!(first == 98 && second == 99))
 				{
 					putchar(',');
 					putchar(' ');
