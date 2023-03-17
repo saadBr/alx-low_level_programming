@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int c;
+	char c;
 
 	/* your code goes there */
 	for (c = 'a'; c <= 'z'; c++)
