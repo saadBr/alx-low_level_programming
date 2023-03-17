@@ -9,34 +9,22 @@
  */
 int main() {
    
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int first, second;
 
-	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
+	for (first = 0; first <= 98; first++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (second = first + 1; second <= 99; second++)
 		{
-		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
-			{
-				for (o = ones + 1; o <= '9'; o++)
+			putchar(48 + (first / 10));
+			putchar(48 + (first % 10));
+			putchar(' ');
+			putchar(48 + (second / 10));
+			putchar(48 + (second % 10));
+			if (!( first == 98 && second == 99))
 				{
-					putchar(tens);
-					putchar(ones);
+					putchar(',');
 					putchar(' ');
-					putchar(t);
-					putchar(o);
-
-					if (!((tens == '9' && ones == '8') &&
-					      (t == '9' && o == '9')))
-					{
-						putchar(',');
-						putchar(' ');
-					}
 				}
-				o = '0';
-			}
 		}
 	}
 	putchar('\n');
