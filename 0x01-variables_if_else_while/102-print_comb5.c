@@ -21,10 +21,10 @@ int main(void)
 			putchar(48 + (second / 10));
 			putchar(48 + (second % 10));
 			if (!(first == 98 && second == 99))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
