@@ -7,33 +7,39 @@
  * Description:'printing all possible different combinations of two two digits'
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-	int i, j, k, l;
+int main() {
+   
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-	for (i = 0; i < 10 ; i++)
+	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
 	{
-		for (j = 0 ; j < 10 ; j++)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			for (k = i; k < 10; k++)
+		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
 			{
-				for (l = j + 1; l < 10; l++)
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar(48 + i);
-					putchar(48 + j);
+					putchar(tens);
+					putchar(ones);
 					putchar(' ');
-					putchar(48 + k);
-					putchar(48 + l);
-					if (!(i == 9 && j == 8 && k == 9 && l == 9))
+					putchar(t);
+					putchar(o);
+
+					if (!((tens == '9' && ones == '8') &&
+					      (t == '9' && o == '9')))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				l = 0;
+				o = '0';
 			}
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
