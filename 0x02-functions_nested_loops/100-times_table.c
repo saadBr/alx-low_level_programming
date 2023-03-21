@@ -2,6 +2,7 @@
 
 /**
  * print_times_table - printing the n times table
+ *@n:the number we print its time tables
  */
 
 void print_times_table(int n)
@@ -45,6 +46,4 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
-	else
-		_putchar('\n');
 }
