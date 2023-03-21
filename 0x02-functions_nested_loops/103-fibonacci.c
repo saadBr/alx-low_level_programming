@@ -19,11 +19,8 @@ int main(void)
 		a = b;
 		b = sum;
 		if (sum % 2 == 0)
-		{
 			fibonacci = fibonacci + sum;
-			printf(", %ld", sum);
-		}
 	}
-	printf("\n");
+	printf("%ld\n", fibonacci);
 	return (0);
 }
