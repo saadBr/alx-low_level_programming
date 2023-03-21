@@ -9,11 +9,11 @@
  */
 int main(void)
 {
-	long int a = 1, b = 2, sum;
+	long int a = 1, b = 2, sum = 0;
 	int i;
 
 	printf("1, 2");
-	while (sum < 4000000)
+	for (i = 0; sum < 4000000; i++)
 	{
 		if ( sum % 2 == 0)
 		{
