@@ -10,9 +10,9 @@
 int main(void)
 {
 	int a = 1, b = 2, sum;
-	
+
 	printf("1 ,2");
-	for (i = 1; i < 100 ; i++)i
+	for (i = 1; i < 100 ; i++)
 	{
 		sum = a + b;
 		a = b;
