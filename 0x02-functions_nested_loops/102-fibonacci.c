@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, i;
-	long int sum;
+	long int a = 1, b = 2, sum;
+	int i;
 
 	printf("1 ,2");
 	for (i = 1; i < 50 ; i++)
