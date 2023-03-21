@@ -9,11 +9,10 @@
  */
 int main(void)
 {
-	long int a = 1, b = 2, sum = 0, fibonacci = 0;
+	long int a = 1, b = 2, sum = 0, fibonacci = 2;
 	int i;
 
-	printf("1, 2");
-	for (i = 0; sum < 4000000; i++)
+	for (i = 1; sum <= 4000000; i++)
 	{
 		sum = a + b;
 		a = b;
