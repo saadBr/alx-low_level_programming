@@ -14,7 +14,7 @@ int main(void)
 	int i, overflow;
 
 	printf("1, 2");
-	for (i = 1; i < 49 ; i++)
+	for (i = 1; i < 93 ; i++)
 	{
 		sum = a + b;
 		a = b;
