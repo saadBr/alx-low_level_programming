@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, sum, i;
+	int a = 1, b = 2, i, sum;
 
 	printf("1 ,2");
 	for (i = 1; i < 100 ; i++)
@@ -17,7 +17,7 @@ int main(void)
 		sum = a + b;
 		a = b;
 		b = sum;
-		printf(" ,%d", sum);
+		printf(" ,%ld", sum)
 	}
 	return (0);
 }
