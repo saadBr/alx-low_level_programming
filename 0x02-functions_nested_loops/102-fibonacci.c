@@ -9,7 +9,8 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, i, sum;
+	int a = 1, b = 2, i;
+	long int sum;
 
 	printf("1 ,2");
 	for (i = 1; i < 100 ; i++)
