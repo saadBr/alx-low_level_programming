@@ -9,17 +9,18 @@
  */
 int main(void)
 {
-	long int a = 1, b = 2, sum = 0;
+	long int a = 1, b = 2, sum = 0, fibonacci = 0;
 	int i;
 
 	printf("1, 2");
 	for (i = 0; sum < 4000000; i++)
 	{
-		if ( sum % 2 == 0)
+		sum = a + b;
+		a = b;
+		b = sum;
+		if (sum % 2 == 0)
 		{
-			sum = a + b;
-			a = b;
-			b = sum;
+			fibonacci = fibonacci + sum;
 			printf(", %ld", sum);
 		}
 	}
