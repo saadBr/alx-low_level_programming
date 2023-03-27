@@ -9,9 +9,9 @@ void puts2(char *str)
 {
 	int c = 0, i;
 
-	while (s[c] != '\0')
+	while (str[c] != '\0')
 		c++;
 	for (i = 0; i < c; i += 2)
-		_putchar(s[i]);
+		_putchar(str[i]);
 	_putchar('\n');
 }
