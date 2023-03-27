@@ -5,7 +5,7 @@ int main(void)
 {
 	int myrand , i;
 
-	for (int i =0; i < 10 ; i++)
+	for (i =0; i < 10 ; i++)
 	{
 		myrand = (rand() % 125) + 1;
 		printf("%c", myrand);
