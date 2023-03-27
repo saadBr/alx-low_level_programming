@@ -9,8 +9,8 @@
 int _atoi(char *s)
 {
 	int c = 0, start = 0, power = 1, sign = 1, i;
-	unsigned int = 0;
-	
+	unsigned int num = 0;
+
 	while (s[c] != '\0')
 		c++;
 
@@ -18,8 +18,7 @@ int _atoi(char *s)
 	{
 		if (s[start] >= '0' && s[start] <= '9')
 			break;
-		else
-			start++;
+		start++;
 	}
 	for (i = 0; i < start; i++)
 	{
@@ -31,13 +30,13 @@ int _atoi(char *s)
 		if (power == 1)
 		{
 			num = s[start] - '0';
-			power*=10;
+			power *= 10;
 		}
-		else 
+		else
 			num = (num * power) + (s[start] - '0');
 		start++;
 	}
 
-	return num*sign;
+	return (num * sign);
 
 }
