@@ -5,7 +5,7 @@
  * @str: string to print
  */
 
-void puts2(char *s)
+void puts2(char *str)
 {
 	int c = 0, i;
 
