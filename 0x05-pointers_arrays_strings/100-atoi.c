@@ -8,7 +8,8 @@
 
 int _atoi(char *s)
 {
-	int c = 0, start = 0, num = 0, power = 1, sign = 1;
+	int c = 0, start = 0, power = 1, sign = 1, i;
+	unsigned int = 0;
 	
 	while (s[c] != '\0')
 		c++;
@@ -20,8 +21,11 @@ int _atoi(char *s)
 		else
 			start++;
 	}
-	if (s[start-1] == '-')
-		sign *= (-1);
+	for (i = 0; i < start; i++)
+	{
+		if (s[i] == '-')
+			sign *= (-1);
+	}
 	while (start < c && s[start] >= '0' && s[start] <= '9')
 	{
 		if (power == 1)
