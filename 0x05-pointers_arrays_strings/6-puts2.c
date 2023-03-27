@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * puts2 - prints every second character of a string, followed by a new line
+ * @str: string to print
  */
 
 void puts2(char *s)
