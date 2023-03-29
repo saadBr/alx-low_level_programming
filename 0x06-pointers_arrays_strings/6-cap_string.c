@@ -9,9 +9,9 @@
 char *cap_string(char *s)
 {
 	int i = 0;
-	
+
 	if (*s >= 'a' && *s <= 'z')
-                                *s -= 32;
+		*s -= 32;
 	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == ' ' || *(s + i) == '\t' || *(s + i) == '.' ||
