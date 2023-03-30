@@ -26,43 +26,40 @@ int _strlen(char *s)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int l1 = _strlen(n1), l2 = _strlen(n2), i, j, k, re = 0, tmp = 0, big;
+	int l1 = _strlen(n1), l2 = _strlen(n2), n1_int, n2_int, re = 0, big, add;
 
-	if (l2 >= l1)
-		big = l2, i = l1 - 1, j = l2 - 1, k = l2;
+	if (l1 >= l2)
+		big = l1;
 	else
-		big = l1, i = l2 - 1, j = l1 - 1, k = l1;
-	if (size_r > big + 1)
-	{
-		for (; i >= 0; i--, j--, k--)
-		{
-			r[k] = (((n1[j] - 48) + (n2[i] - 48) + re) % 10) + '0';
-			re = ((n1[j] - 48) + (n2[i] - 48) + re) / 10;
-		}
-		for (; j >= 0 ; j--, k--)
-		{
-			if (l2 > l1)
-			{
-				r[k] = (((n2[j] - 48) + re) % 10) + '0';
-				re = ((n2[j] - 48) + re) / 10;
-			}
-			else
-			{
-				r[k] = (((n1[j] - 48) + re) % 10) + '0';
-				re = ((n1[j] - 48) + re) / 10;
-			}
-		}
-		if (re > 0)
-			r[k] = re + '0';
-		else
-		{
-			k = 0;
-			for (; k < big; k++)
-				tmp = r[k], r[k] = r[k + 1], r[k + 1] = tmp;
-			r[big] = '\0';
-		}
-		return (r);
-	}
-	else
+		big = l2;
+	if (size_r <= big + 1)
 		return (0);
+	*(r + (big + 1)) = '\0';
+	l1--, l2--, size_r--;
+	n1_int = *(n1 + l1) - 48, n2_int = *(n2 + l2) - 48;
+	while (big >= 0)
+	{
+		add = n1_int + n2_int + re;
+		if (add >= 10)
+			re = add / 10;
+		else
+			re = 0;
+		if (add > 0)
+			*(r + big) = (add % 10) + 48;
+		else
+			*(r + big) = '0';
+		if (l1 > 0)
+			l1--, n1_int = *(n1 + l1) - 48;
+		else
+			n1_int = 0;
+		if (l2 > 0)
+			l2--, n2_int = *(n2 + l2) - 48;
+		else
+			n2_int = 0;
+		big--, size_r--;
+	}
+	if (*(r) == '0')
+		return (r + 1);
+	else
+		return (r);
 }
