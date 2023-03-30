@@ -1,5 +1,20 @@
 #include "main.h"
 /**
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
+
+int _strlen(char *s)
+{
+	int length = 0;
+
+	for (; *s != '\0'; s++)
+		length++;
+	return (length);
+}
+/**
  * infinite_add - adds two numbers
  * @n1: number one argument for *infinite_add
  * @n2: number two argument for *infinite_add
@@ -11,69 +26,40 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = 0, len2 = 0, i = 0, j = 0, k, reste = 0, tmp = 0;
+	int l1 = _strlen(n1), l2 = _strlen(n2), i, j, k, re = 0, tmp = 0, big;
 
-	while (*(n1 + i) != '\0')
+	if (l2 >= l1)
+		big = l2, i = l1 - 1, j = l2 - 1, k = l2;
+	else
+		big = l1, i = l2 - 1, j = l1 - 1, k = l1;
+	if (size_r > big + 1)
 	{
-		len1++;
-		i++;
-	}
-	while (*(n2 + j) != '\0')
-	{
-		len2++;
-		j++;
-	}
-	if (len2 >= len1 && size_r > len2 + 1)
-	{
-		for (i = len1 - 1, j = len2 - 1, k = len2; i >= 0; i--, j--, k--)
+		for (; i >= 0; i--, j--, k--)
 		{
-			r[k] = (((n1[i] - 48) + (n2[j] - 48) + reste) % 10) + '0';
-			reste = ((n1[i] - 48) + (n2[j] - 48) + reste) / 10;
+			r[k] = (((n1[j] - 48) + (n2[i] - 48) + re) % 10) + '0';
+			re = ((n1[j] - 48) + (n2[i] - 48) + re) / 10;
 		}
 		for (; j >= 0 ; j--, k--)
 		{
-			r[k] = (((n2[j] - 48) + reste) % 10) + '0';
-			reste = ((n2[j] - 48) + reste) / 10;
+			if (l2 > l1)
+			{
+				r[k] = (((n2[j] - 48) + re) % 10) + '0';
+				re = ((n2[j] - 48) + re) / 10;
+			}
+			else
+			{
+				r[k] = (((n1[j] - 48) + re) % 10) + '0';
+				re = ((n1[j] - 48) + re) / 10;
+			}
 		}
-		if (reste > 0)
-			r[k] = reste + '0';
+		if (re > 0)
+			r[k] = re + '0';
 		else
 		{
 			k = 0;
-			for (; k < len2; k++)
-			{
-				tmp = r[k];
-				r[k] = r[k + 1];
-				r[k + 1] = tmp;
-			}
-			r[len2] = '\0';
-		}
-		return (r);
-	}
-	else if (len1 > len2 && size_r > len1 + 1)
-	{
-		for (i = len2 - 1, j = len1 - 1, k = len1; i >= 0; i--, j--, k--)
-		{
-			r[k] = (((n1[j] - 48) + (n2[i] - 48) + reste) % 10) + '0';
-			reste = ((n1[j] - 48) + (n2[i] - 48) + reste) / 10;
-		}
-		for (; j >= 0 ; j--, k--)
-		{
-			r[k] = (((n1[j] - 48) + reste) % 10) + '0';
-			reste = ((n1[j] - 48) + reste) / 10;
-		}
-		if (reste > 0)
-			r[k] = reste + '0';
-		else
-		{
-			k = 0;
-			for (; k < len1; k++)
-			{
-				tmp = r[k];
-				r[k] = r[k + 1];
-				r[k + 1] = tmp;
-			}
-			r[len1] = '\0';
+			for (; k < big; k++)
+				tmp = r[k], r[k] = r[k + 1], r[k + 1] = tmp;
+			r[big] = '\0';
 		}
 		return (r);
 	}
