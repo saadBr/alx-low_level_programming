@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _strchr - print from the stated letter
  * @s: store the provided values
@@ -15,5 +15,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		++s;
 	}
-	return (0);
+	return (NULL);
 }
