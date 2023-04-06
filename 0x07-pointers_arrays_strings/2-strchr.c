@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strchr - print from the stated letter
+ * _strchr - print from the stated character
  * @s: store the provided values
  * @c: print values starting from c
  * Return: the value of s
