@@ -3,10 +3,10 @@
 
 /**
  * create_array - create an array and initilize it with a char
- * @size : size of array
- * @c : char to initialize the array
+ * @size:  size of array
+ * @c: char to initialize the array
  *
- * Return : NULL or pointer to the array
+ * Return: NULL or pointer to the array
  */
 
 char *create_array(unsigned int size, char c)
