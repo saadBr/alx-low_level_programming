@@ -32,7 +32,7 @@ int count(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[c] == ' ')
+		if (s[i] == ' ')
 			space = 1;
 		else if (space == 1)
 		{
