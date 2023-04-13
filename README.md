@@ -11,3 +11,5 @@ Task 7 : 0x07. C - Even more pointers, arrays and strings.
 Task 8 : 0x08. C - Recursion
 Task 9 : 0x09. C - Static Libraries.
 Task A : 0x0A. C - argc, argv
+TASK B : 0x0B. C - malloc, free
+TASK C : 0x0C. C - More malloc, free
