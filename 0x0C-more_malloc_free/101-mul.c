@@ -3,7 +3,7 @@
 
 /**
  * _isdigit - check if a charachter is digit
- * @argv[]: argument to check
+ * @argv: argument to check
  * Return: 1 if c is digit , 0 if otherwise
  */
 
@@ -75,21 +75,6 @@ void rev_string(char *s, int n)
 	}
 }
 
-/**
-  * _strlen - Returns the length of a string
-  * @s: String to count
-  *
-  * Return: String length
-  */
-
-int _strlen(char *s)
-{
-	int length = 0;
-
-	for (; *s != '\0'; s++)
-		length++;
-	return (length);
-}
 
 /**
  * _malloc - allocates n size byte.
@@ -136,12 +121,13 @@ int main(int argc, char *argv[])
 		_puts("Error");
 		exit(98);
 	}
-	len1 = _strlen(argv[1]);
-	len2 = _strlen(argv[2]);
 
+	for (i = 0; argv[1][i]; i++)
+		len1++;
+	for (i = 0; argv[2][i]; i++)
+		len2++;
 	len = len1 + len2 + 1;
 	ptr = _malloc(len);
-
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		for (index = 0, j = len2 - 1; j >= 0; j--, index++)
@@ -152,7 +138,6 @@ int main(int argc, char *argv[])
 			ptr[l + index] = (tmp % 10) + '0';
 			rest = tmp / 10;
 		}
-
 		while (rest)
 		{
 			ptr[l + index] = (rest % 10) + '0';
@@ -166,4 +151,3 @@ int main(int argc, char *argv[])
 	free(ptr);
 	return (0);
 }
-
