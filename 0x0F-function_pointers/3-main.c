@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (!op)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	printf("%d\n", op(atoi(argv[1]), atoi(argv[3])));
