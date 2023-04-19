@@ -15,3 +15,4 @@ TASK B : 0x0B. C - malloc, free
 TASK C : 0x0C. C - More malloc, free
 TASK D : 0x0D. C - Preprocessor
 TASK E : 0x0E. C - Structures, typedef
+TASK F : 0x0F. C - Function pointers
