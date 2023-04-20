@@ -16,3 +16,4 @@ TASK C : 0x0C. C - More malloc, free
 TASK D : 0x0D. C - Preprocessor
 TASK E : 0x0E. C - Structures, typedef
 TASK F : 0x0F. C - Function pointers
+TASK 10 : 0x10. C - Variadic functions
