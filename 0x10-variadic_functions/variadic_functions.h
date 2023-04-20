@@ -15,7 +15,7 @@ void print_string(char *separator, va_list params);
 /**
  * struct format_types - struct format
  * @id: conversion specifier
- * f: func pointer
+ * @f: func pointer
  */
 typedef struct format_types
 {
