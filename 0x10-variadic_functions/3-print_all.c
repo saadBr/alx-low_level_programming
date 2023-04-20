@@ -47,8 +47,8 @@ void print_all(const char * const format, ...)
 
 /**
  * print_char - printing a single char
- * separator: string to be printed between the strings
- * @args: list of params
+ * @separator: string to be printed between the strings
+ * @params: list of params
  *
  * Return: Nothing
  */
@@ -59,8 +59,8 @@ void print_char(char *separator, va_list params)
 
 /**
  * print_int - printing an integer
- * separator: string to be printed between the strings
- * @args: list of params
+ * @separator: string to be printed between the strings
+ * @params: list of params
  *
  * Return: Nothing
  */
@@ -71,8 +71,8 @@ void print_int(char *separator, va_list params)
 
 /**
  * print_float - printing a a float
- * separator: string to be printed between the strings
- * @args: list of params
+ * @separator: string to be printed between the strings
+ * @params: list of params
  *
  * Return: Nothing
  */
@@ -82,15 +82,15 @@ void print_float(char *separator, va_list params)
 }
 /**
  * print_string - printing a string
- * separator: string to be printed between the strings
- * @args: list of params
+ * @separator: string to be printed between the strings
+ * @params: list of params
  *
  * Return: Nothing
  */
 void print_string(char *separator, va_list params)
 {
 	char *string = va_arg(params, char *);
-	
+
 	if (string != NULL)
 	{
 		printf("%s%s", separator, string);
