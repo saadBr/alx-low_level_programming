@@ -12,5 +12,5 @@ pop rbp;
 mov rax, 0;
 ret;
 section .data;
-string: db "Hello, Holbertson", 10, 0
+string: db "Hello, Holberton", 10, 0
 format: db "%s", 0
