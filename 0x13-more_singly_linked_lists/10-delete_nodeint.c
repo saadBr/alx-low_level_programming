@@ -3,7 +3,7 @@
 /**
  * delete_nodeint_at_index - deletes the node at index of a linked list
  * @head: head node
- * @index index of node to delete
+ * @index: index of node to delete
  *
  * Return: 1 if successed or -1 if failed
  */
@@ -22,7 +22,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			aux = right->next;
 			*head = aux;
 			free(list);
-			return(1);
+			return (1);
 		}
 		while (i < index - 1 && right)
 		{
