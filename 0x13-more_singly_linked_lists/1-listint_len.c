@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_len - get list length
+ * listint_len - get list length
  *
  * @h: pointer to firts element
  *
