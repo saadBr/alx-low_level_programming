@@ -33,9 +33,9 @@ int main(int argc, char *argv[])
 	{
 		if (from == -1 || read_file == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buff);
-			exit(99);
+			exit(98);
 		}
 
 		write_file = write(to, buff, read_file);
