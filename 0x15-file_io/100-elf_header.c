@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 
 int print_error(int num, char *file)
 {
-	switch (n)
+	switch (num)
 	{
 		case 0:
 			dprintf(STDERR_FILENO, "Usage: %s elf_filename\n", file);
