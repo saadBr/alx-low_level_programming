@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - displays the information contained in the ELF header at the start of an ELF file.
+ * main - displays the information contained in the ELF header.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	Elf64_Ehdr head;
 
 	if (argc != 2)
-		print_error(0 , argv[0]);
+		print_error(0, argv[0]);
 	file = open(argv[1], O_RDONLY);
 	if (file == -1)
 		print_error(1, argv[1]);
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
  * Return: always 0
  */
 
-int print_error(int n, char *file)
+int print_error(int num, char *file)
 {
 	switch (n)
 	{
